@@ -102,8 +102,6 @@ export default function SubmitPreprint() {
           </form>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

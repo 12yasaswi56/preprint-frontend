@@ -53,7 +53,7 @@ const Navbar = () => {
           {isAuthenticated ? (
             <button onClick={handleLogout} style={styles.logoutButton}>Logout</button>
           ) : (
-            <Link to="/loginSignup" style={styles.navLink}>Login</Link>
+            <Link to="/login" style={styles.navLink}>Login</Link>
           )}
         </li>
       </ul>

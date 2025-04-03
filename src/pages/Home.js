@@ -1,5 +1,6 @@
 // import React from "react";
 import Navbar from "../components/navbar";
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 const Home = () => {
   return (
@@ -50,10 +51,10 @@ const HeaderSection = () => {
         <h1 style={styles.firstLine}>FIRST OF ITS KIND</h1>
         <h1 style={styles.secondLine}>TRANSPARENT RESEARCH SERVER</h1>
         <div style={styles.sub}>
-          <a href="/submitpreprint" style={styles.navLinkButton}>
-            Submit Preprint
-            <span style={styles.buttonArrow}>→</span>
-          </a>
+        <Link to="/submitpreprint" style={styles.navLinkButton}>
+  Submit Preprint
+  <span style={styles.buttonArrow}>→</span>
+</Link>
         </div>
       </div>
     </div>

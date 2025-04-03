@@ -14,25 +14,43 @@ import Footer from "./components/footer"; // Assuming your footer file is named 
 
 function App() {
   return (
-    <Router>
-      <div style={styles.appContainer}>
-        <div style={styles.contentWrapper}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/latestpreprints" element={<LatestPreprints />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/tools & services" element={<ToolsAndServices />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/preprint/:id" element={<PreprintDetails />} />
-            <Route path="/submitpreprint" element={<SubmitPreprint />} />
-            <Route path="/login" element={<LoginSignup />} />
-          </Routes>
-        </div>
+    // <Router>
+    //   <div style={styles.appContainer}>
+    //     <div style={styles.contentWrapper}>
+    //       <Routes>
+    //         <Route path="/" element={<Home />} />
+    //         <Route path="/latestpreprints" element={<LatestPreprints />} />
+    //         <Route path="/about" element={<About />} />
+    //         <Route path="/tools & services" element={<ToolsAndServices />} />
+    //         <Route path="/team" element={<Team />} />
+    //         <Route path="/preprint/:id" element={<PreprintDetails />} />
+    //         <Route path="/submitpreprint" element={<SubmitPreprint />} />
+    //         <Route path="/login" element={<LoginSignup />} />
+    //       </Routes>
+    //     </div>
 
-        {/* Footer that stays at the bottom */}
-        <Footer />
-      </div>
-    </Router>
+    //     {/* Footer that stays at the bottom */}
+    //     <Footer />
+    //   </div>
+    // </Router>
+    <Router basename="/enertransition">
+  <div style={styles.appContainer}>
+    <div style={styles.contentWrapper}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/latestpreprints" element={<LatestPreprints />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/tools & services" element={<ToolsAndServices />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/preprint/:id" element={<PreprintDetails />} />
+        <Route path="/submitpreprint" element={<SubmitPreprint />} />
+        <Route path="/login" element={<LoginSignup />} />
+      </Routes>
+    </div>
+    <Footer />
+  </div>
+</Router>
+
   );
 }
 

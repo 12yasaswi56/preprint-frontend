@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-
+import { Link } from "react-router-dom";
 const LatestPreprints = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -51,9 +51,9 @@ const LatestPreprints = () => {
                 {results.map((preprint) => (
                   <li key={preprint._id} style={styles.preprintItemSearch}>
                     <h3>
-                      <a href={`/preprint/${preprint._id}`} style={styles.titleLink}>
-                        {preprint.title}
-                      </a>
+                    <Link to={`/preprint/${preprint._id}`} style={styles.titleLink}>
+  {preprint.title}
+</Link>
                     </h3>
                     <p style={styles.author}>By {preprint.author}</p>
                   </li>
@@ -70,9 +70,9 @@ const LatestPreprints = () => {
               {preprints.map((preprint) => (
                 <li key={preprint._id} style={styles.preprintItem}>
                   <h3>
-                    <a href={`/preprint/${preprint._id}`} style={styles.titleLink}>
-                      {preprint.title}
-                    </a>
+                  <Link to={`/preprint/${preprint._id}`} style={styles.titleLink}>
+  {preprint.title}
+</Link>
                   </h3>
                   <p style={styles.author}>By {preprint.author}</p>
                   <p style={styles.abstract}>{preprint.abstract}</p>

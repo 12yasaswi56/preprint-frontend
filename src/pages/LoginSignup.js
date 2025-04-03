@@ -31,7 +31,7 @@ const LoginSignup = () => {
      
 
       console.log("Stored Token:", localStorage.getItem("auth-token"));
-      window.location.replace("/");
+      window.location.replace("/enertransition");
     } else {
       alert(dataObj.error);
 
@@ -58,7 +58,7 @@ const LoginSignup = () => {
       localStorage.setItem("auth-token", dataObj.token);
       
 
-      window.location.replace("/");
+      window.location.replace("/enertransition");
     } else {
       alert(dataObj.error);
     }
@@ -126,8 +126,8 @@ const LoginSignup = () => {
         </div>
       </div>
 
-      {/* Footer Section */}
-      <Footer />
+      {/* Footer Section
+      <Footer /> */}
     </div>
     </>
   );
